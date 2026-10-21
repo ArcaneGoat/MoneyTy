@@ -11,11 +11,8 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Chercher le pom.xml
-        run: |
-          find . -name pom.xml
-          mvn -B -f "$(find . -name pom.xml | head -n 1)" clean package
+      - run: mvn -B clean package
       - uses: actions/upload-artifact@v4
         with:
-          name: Generateurs-jar
-          path: '**/target/Generateurs-*.jar'
+          name: Generators-jar
+          path: target/Generators-*.jar
