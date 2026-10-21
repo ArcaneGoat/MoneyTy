@@ -1,0 +1,19 @@
+name: Generators
+version: 2.0.0
+main: fr.moneyty.generators.GeneratorsPlugin
+api-version: '1.20'
+description: Money generators (100 tiers), hopper-fed barrel and boost beacons
+depend: [Vault]
+softdepend: [Essentials]
+commands:
+  gen:
+    description: Generator shop and admin commands
+    usage: /gen [info|offline|give|givebarrel|givebeacon|slots|beaconslots|defaultmax|eco|reload]
+    aliases: [generator, generators]
+permissions:
+  gen.use:
+    description: Use generators
+    default: true
+  gen.admin:
+    description: Admin commands and managing other players' generators
+    default: op

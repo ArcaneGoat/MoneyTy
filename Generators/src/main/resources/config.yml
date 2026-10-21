@@ -1,0 +1,45 @@
+# Chat prefix. Supports &#RRGGBB hex colors and & color codes.
+prefix: "&#FCD05C&lM&#FAD77E&lᴏ&#F9DD9F&lɴ&#F7E4C1&lᴇ&#F9DD9F&lʏ&#FAD77E&lT&#FCD05C&lʏ &8» &r"
+
+# Production interval in seconds (restart required to apply)
+interval-seconds: 15
+
+economy:
+  # Value of one drop for tier 1 (hay block) and tier 100 (command block).
+  # Tiers in between follow an exponential curve.
+  base-value: 1
+  top-value: 5000000
+  # Purchase price = drop value x this multiplier (hay: $1 -> $50, dirt: $2 -> $100).
+  # An upgrade costs the price difference between two tiers (neutral: no gain, no loss).
+  price-multiplier: 50
+  # Target budget (50Q). Not a limit: used for console alerts and /gen eco.
+  budget: 5.0E16
+
+limits:
+  # Default max generators per player.
+  # Raised by the permission gen.max.<n> and by extra slots (/gen slots).
+  # Can be changed in game with /gen defaultmax <n>.
+  default-max-generators: 25
+  # Default max active beacons per player (raised by /gen beaconslots)
+  max-beacons: 3
+
+barrel:
+  # Capacity in drops = capacity-per-level x barrel level (level 1 to 20 = sell multiplier x1 to x20)
+  # The barrel only receives drops brought in by hoppers.
+  capacity-per-level: 10000
+  max-level: 20
+
+beacon:
+  # Max boost of one beacon (1.0 = +100%). Boosts of the same type add up.
+  # Types: MONEY (sell value), SPEED (production speed), CAPACITY (barrel capacity)
+  max-bonus: 1.0
+  # Lifetime when not given in /gen givebeacon
+  default-duration-hours: 24
+
+offline:
+  # Minimum time offline before generators count offline production
+  min-minutes: 30
+  # Share of offline drops that is lost (0.25 = -25%)
+  penalty: 0.25
+  # Max offline time counted (0 = no cap). Keeps the economy stable.
+  max-hours: 12
