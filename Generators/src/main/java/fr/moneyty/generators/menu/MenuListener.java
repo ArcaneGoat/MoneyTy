@@ -23,3 +23,4 @@ click in the player's own inventory
     public void onDrag(InventoryDragEvent e) {
         if (e.getInventory().getHolder() instanceof Menu) e.setCancelled(true);
     }
+}
