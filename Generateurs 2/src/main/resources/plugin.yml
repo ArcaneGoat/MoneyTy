@@ -1,0 +1,19 @@
+name: Generateurs
+version: 1.0.0
+main: fr.generateurs.GeneratorsPlugin
+api-version: '1.20'
+description: Generateurs d'argent (100 paliers), barrel et beacon multiplicateurs
+depend: [Vault]
+softdepend: [Essentials]
+commands:
+  gen:
+    description: Menu des generateurs et commandes admin
+    usage: /gen [info|give|givebarrel|givebeacon|eco|reload]
+    aliases: [generateur, generateurs]
+permissions:
+  gen.use:
+    description: Utiliser les generateurs
+    default: true
+  gen.admin:
+    description: Commandes admin et gestion des generateurs des autres
+    default: op
