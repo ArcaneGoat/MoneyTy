@@ -14,8 +14,7 @@ public final class MenuListener implements Listener {
         e.setCancelled(true);
         if (!(e.getWhoClicked() instanceof Player p)) return;
         int raw = e.getRawSlot();
-        if (raw < 0 || raw >= e.getInventory().getSize()) return; //
-click in the player's own inventory
+        if (raw < 0 || raw >= e.getInventory().getSize()) return;
         menu.click(p, raw, e.getClick());
     }
 
